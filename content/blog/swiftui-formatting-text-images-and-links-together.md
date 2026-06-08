@@ -24,16 +24,12 @@ Text("Accept **[Terms and Conditions](https://oliverfoggin.com)** and **[Privacy
   .tint(.green)
 ```
 
-![SwiftUI text with green linked terms and privacy policy.](swiftui-links-without-icons.svg)
-
 A promising start. And then I added the images...
 
 ```swift
 Text("Accept **[Terms and Conditions \(Image(systemName: "square.and.arrow.up"))](https://oliverfoggin.com)** and **[Privacy Policy \(Image(systemName: "square.and.arrow.up"))](https://oliverfoggin.com)**")
   .tint(.green)
 ```
-
-![SwiftUI text where linked words are green but the inline icons remain black.](swiftui-links-with-black-icons.svg)
 
 This is where it got tricky as the images were not picking up the tint colour. And adding the `.foregroundColor` modifier to the `Image` gave an error.
 
@@ -45,8 +41,6 @@ By wrapping the `Image` in `Text` we can finally append the color to make it loo
 Text("Accept **[Terms and Conditions \(Text(Image(systemName: "square.and.arrow.up")).foregroundColor(.green))](https://oliverfoggin.com)** and **[Privacy Policy \(Text(Image(systemName: "square.and.arrow.up")).foregroundColor(.green))](https://oliverfoggin.com)**")
   .tint(.green)
 ```
-
-![SwiftUI text where linked words and inline icons are all green.](swiftui-links-with-green-icons.svg)
 
 Except now the line of text is getting a bit out of hand. So extracting a couple of helpers made it much nicer to read.
 
