@@ -1,16 +1,55 @@
 # The URL the site will be built for
 base_url = "https://oliverfoggin.com"
 
+# The site title and description; used by the Terminus theme and feeds.
+title = "Oliver Foggin"
+description = "A developer blog about Swift, iOS, and software engineering."
+
+# Use the Terminus theme from themes/terminus.
+theme = "terminus"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
+
+# When set to "true", a feed is automatically generated.
+generate_feeds = true
+
+# The default author for pages
+author = "Oliver Foggin"
+
+# Taxonomies rendered by the theme.
+taxonomies = [
+  { name = "tags", feed = true },
+  { name = "categories", feed = true, paginate_by = 5 },
+]
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
 [markdown]
+render_emoji = true
+bottom_footnotes = true
+lazy_async_image = true
+github_alerts = true
 
 [markdown.highlighting]
+# Inline highlighting keeps code blocks self-contained for GitHub Pages output.
+style = "inline"
 theme = "catppuccin-mocha"
 
 [extra]
-# Put all your custom variables here
+close_responsive_menu_on_resize = true
+feed_icon = true
+layout = "center"
+show_default_author = false
+
+main_menu = [
+  { name = "blog", url = "blog", trailing_slash = true },
+  { name = "archive", url = "archive", trailing_slash = true },
+  { name = "tags", url = "tags", trailing_slash = true },
+  { name = "github", url = "https://github.com/oliverfoggin/MyBlog", new_tab = true },
+]
+
+socials = [
+  { name = "github", url = "https://github.com/oliverfoggin" },
+]
