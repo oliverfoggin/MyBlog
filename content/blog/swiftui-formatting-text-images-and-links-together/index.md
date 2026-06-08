@@ -24,7 +24,7 @@ Text("Accept **[Terms and Conditions](https://oliverfoggin.com)** and **[Privacy
   .tint(.green)
 ```
 
-![SwiftUI text with green linked terms and privacy policy.](image2.webp)
+![SwiftUI text with green linked terms and privacy policy.](image1.webp)
 
 A promising start. And then I added the images...
 
@@ -33,7 +33,7 @@ Text("Accept **[Terms and Conditions \(Image(systemName: "square.and.arrow.up"))
   .tint(.green)
 ```
 
-![SwiftUI text where linked words are green but the inline icons remain black.](image3.webp)
+![SwiftUI text where linked words are green but the inline icons remain black.](image2.webp)
 
 This is where it got tricky as the images were not picking up the tint colour. And adding the `.foregroundColor` modifier to the `Image` gave an error.
 
@@ -46,7 +46,7 @@ Text("Accept **[Terms and Conditions \(Text(Image(systemName: "square.and.arrow.
   .tint(.green)
 ```
 
-![SwiftUI text where linked words and inline icons are all green.](image1.webp)
+![SwiftUI text where linked words and inline icons are all green.](image3.webp)
 
 Except now the line of text is getting a bit out of hand. So extracting a couple of helpers made it much nicer to read.
 
