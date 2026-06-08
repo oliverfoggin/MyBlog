@@ -45,11 +45,13 @@ show_default_author = false
 
 main_menu = [
   { name = "blog", url = "blog", trailing_slash = true },
+  { name = "about", url = "about", trailing_slash = true },
   { name = "archive", url = "archive", trailing_slash = true },
   { name = "tags", url = "tags", trailing_slash = true },
   { name = "github", url = "https://github.com/oliverfoggin/MyBlog", new_tab = true },
 ]
 
 socials = [
+  { name = "email", url = "mailto:oliver@oliverfoggin.com" },
   { name = "github", url = "https://github.com/oliverfoggin" },
 ]
